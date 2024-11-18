@@ -27,6 +27,7 @@ packages=(
     "up"
     "uv"
     "wget"
+    "openconnect"
 )
 
 casks=(
@@ -52,6 +53,7 @@ casks=(
     "utm"
     "wezterm"
     "vlc"
+    "logitech-g-hub"
 )
 
 for package in "${packages[@]}"; do
