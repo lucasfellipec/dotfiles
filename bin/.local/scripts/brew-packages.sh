@@ -28,6 +28,7 @@ packages=(
     "uv"
     "wget"
     "openconnect"
+    "tree"
 )
 
 casks=(
