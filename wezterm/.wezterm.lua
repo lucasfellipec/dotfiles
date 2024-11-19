@@ -119,7 +119,7 @@ return {
     font_size = 14,
     initial_cols = 100,
     initial_rows = 30,
-    max_fps = 120,
+    max_fps = 165,
     --[[background = {
         {
             source = {
