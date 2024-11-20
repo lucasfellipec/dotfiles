@@ -22,6 +22,11 @@ wezterm.on("window-config-reloaded", function(window)
         window:set_config_overrides({
             dpi = 144,
             font_size = 18,
+            window_frame = {
+                font = wezterm.font("JetBrains Mono", { weight = "Bold" }),
+                font_size = 18,
+                active_titlebar_bg = primary_color,
+            },
         })
     end
 end)
@@ -119,7 +124,7 @@ return {
     font_size = 14,
     initial_cols = 100,
     initial_rows = 30,
-    max_fps = 165,
+    max_fps = 144,
     --[[background = {
         {
             source = {
