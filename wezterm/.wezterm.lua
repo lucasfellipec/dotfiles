@@ -1,10 +1,11 @@
 local wezterm = require "wezterm"
 local primary_color = "#000000"
+local font_family = "Fira Mono"
 
 wezterm.on(
     "format-tab-title",
     function(tab)
-        local title = "im"
+        local title = "im bob"
         if tab.is_active then
             return {
                 { Text = title },
@@ -20,11 +21,21 @@ wezterm.on(
 wezterm.on("window-config-reloaded", function(window)
     if wezterm.gui.screens().active.name == "XB271HU" then
         window:set_config_overrides({
-            dpi = 144,
-            font_size = 18,
+            dpi = 250,
+            font_size = 14,
             window_frame = {
-                font = wezterm.font("JetBrains Mono", { weight = "Bold" }),
-                font_size = 18,
+                font = wezterm.font(font_family, { weight = "Bold" }),
+                font_size = 12,
+                active_titlebar_bg = primary_color,
+            },
+        })
+    elseif wezterm.gui.screens().active.name == "Built-in Retina Display" then
+        window:set_config_overrides({
+            dpi = 144,
+            font_size = 14,
+            window_frame = {
+                font = wezterm.font(font_family, { weight = "Bold" }),
+                font_size = 12,
                 active_titlebar_bg = primary_color,
             },
         })
@@ -33,7 +44,7 @@ end)
 
 return {
     window_frame = {
-        font = wezterm.font("JetBrains Mono", { weight = "Bold" }),
+        font = wezterm.font(font_family, { weight = "Bold" }),
         font_size = 12,
         active_titlebar_bg = primary_color,
     },
@@ -115,7 +126,7 @@ return {
     window_decorations = "RESIZE|MACOS_FORCE_DISABLE_SHADOW",
     adjust_window_size_when_changing_font_size = false,
     show_tab_index_in_tab_bar = false,
-    font = wezterm.font("JetBrains Mono", { italic = false }),
+    font = wezterm.font(font_family, { italic = false }),
     scrollback_lines = 30000,
     window_close_confirmation = "NeverPrompt",
     window_padding = {
@@ -124,7 +135,7 @@ return {
     font_size = 14,
     initial_cols = 100,
     initial_rows = 30,
-    max_fps = 144,
+    max_fps = 165,
     --[[background = {
         {
             source = {

@@ -3,11 +3,10 @@ sudo yabai --load-sa
 
 yabai -m rule --add app="^Firefox$" space=2 manage=on
 
-yabai -m rule --add app="^Obsidian$" space=3 manage=on
-yabai -m rule --add app="^ChatGPT$" space=4 manage=on
+yabai -m rule --add app="^Obsidian$" space=3 manage=on grid="100:100:5:5:90:90"
+yabai -m rule --add app="^ChatGPT$" space=4 manage=on grid="100:100:5:5:90:90"
 
-yabai -m rule --add app="^DuckDuckGo$" space=5 manage=on
-yabai -m rule --add app="^Slack$" space=6 manage=on
+yabai -m rule --add app="^Slack$" space=8 manage=on grid="100:100:5:5:90:90"
 
 yabai -m rule --add app="^WezTerm$" space=1 manage=on
 yabai -m signal --add event=application_launched app="^WezTerm$" action="$HOME/www/dotfiles/bin/.local/scripts/wezterm-fullscreen.sh"

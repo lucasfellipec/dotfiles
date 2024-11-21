@@ -29,6 +29,8 @@ packages=(
     "wget"
     "openconnect"
     "tree"
+    "pcre"
+    "pcre2"
 )
 
 casks=(
