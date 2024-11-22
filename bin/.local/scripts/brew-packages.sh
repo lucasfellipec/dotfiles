@@ -57,6 +57,8 @@ casks=(
     "wezterm"
     "vlc"
     "logitech-g-hub"
+    "claude"
+    "pictogram"
 )
 
 for package in "${packages[@]}"; do

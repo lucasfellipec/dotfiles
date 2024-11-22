@@ -156,15 +156,5 @@ return {
             mods = "CMD",
             action = wezterm.action.ToggleFullScreen,
         },
-        {
-            key = 'p',
-            mods = 'CTRL|SHIFT',
-            action = wezterm.action.DisableDefaultAssignment,
-        },
-        {
-            key = 'n',
-            mods = 'CTRL|SHIFT',
-            action = wezterm.action.DisableDefaultAssignment,
-        },
     }
 }
