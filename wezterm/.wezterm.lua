@@ -5,7 +5,7 @@ local font_family = "JetBrains Mono"
 wezterm.on(
     "format-tab-title",
     function(tab)
-        local title = "im et"
+        local title = "hi"
         if tab.is_active then
             return {
                 { Text = title },
@@ -35,7 +35,7 @@ wezterm.on("window-config-reloaded", function(window)
             font_size = 14,
             window_frame = {
                 font = wezterm.font(font_family, { weight = "Bold" }),
-                font_size = 14,
+                font_size = 12.5,
                 active_titlebar_bg = primary_color,
             },
         })
@@ -45,7 +45,7 @@ end)
 return {
     window_frame = {
         font = wezterm.font(font_family, { weight = "Bold" }),
-        font_size = 14,
+        font_size = 12.5,
         active_titlebar_bg = primary_color,
     },
     font_dirs = {},
