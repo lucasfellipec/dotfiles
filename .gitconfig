@@ -12,5 +12,5 @@
     undo = checkout --
     rollback = reset --soft HEAD~1
 [user]
-	name = Lucas Fellipe Carvalho Moreira
-	email = lucas.fellipe.c@gmail.com
+    name = Lucas Fellipe Carvalho Moreira
+    email = lucas.fellipe.c@gmail.com
