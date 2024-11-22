@@ -1,11 +1,11 @@
 local wezterm = require "wezterm"
 local primary_color = "#000000"
-local font_family = "Fira Mono"
+local font_family = "JetBrains Mono"
 
 wezterm.on(
     "format-tab-title",
     function(tab)
-        local title = "im bob"
+        local title = "im et"
         if tab.is_active then
             return {
                 { Text = title },
@@ -35,7 +35,7 @@ wezterm.on("window-config-reloaded", function(window)
             font_size = 14,
             window_frame = {
                 font = wezterm.font(font_family, { weight = "Bold" }),
-                font_size = 12,
+                font_size = 14,
                 active_titlebar_bg = primary_color,
             },
         })
@@ -45,9 +45,10 @@ end)
 return {
     window_frame = {
         font = wezterm.font(font_family, { weight = "Bold" }),
-        font_size = 12,
+        font_size = 14,
         active_titlebar_bg = primary_color,
     },
+    font_dirs = {},
     term = "wezterm",
     -- native_macos_fullscreen_mode = true,
     enable_wayland = false,
@@ -154,6 +155,16 @@ return {
             key = ".",
             mods = "CMD",
             action = wezterm.action.ToggleFullScreen,
+        },
+        {
+            key = 'p',
+            mods = 'CTRL|SHIFT',
+            action = wezterm.action.DisableDefaultAssignment,
+        },
+        {
+            key = 'n',
+            mods = 'CTRL|SHIFT',
+            action = wezterm.action.DisableDefaultAssignment,
         },
     }
 }
