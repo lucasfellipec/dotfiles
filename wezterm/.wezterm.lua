@@ -159,12 +159,12 @@ return {
         {
             key = "P",
             mods = "CTRL|SHIFT",
-            action = wezterm.action.DisableDefaultAssignment,
+            action = wezterm.action.SendString("\x1b[112;6u")
         },
         {
             key = "N",
             mods = "CTRL|SHIFT",
-            action = wezterm.action.DisableDefaultAssignment,
+            action = wezterm.action.SendString("\x1b[110;6u"),
         },
     }
 }
