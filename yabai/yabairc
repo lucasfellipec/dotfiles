@@ -2,6 +2,7 @@ yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
 
 yabai -m rule --add app="^Firefox$" space=2 manage=on
+yabai -m rule --add app="^Spotify$" space=2 manage=on
 
 yabai -m rule --add app="^Obsidian$" space=3 manage=on grid="100:100:5:5:90:90"
 yabai -m rule --add app="^ChatGPT$" space=4 manage=on grid="100:100:5:5:90:90"

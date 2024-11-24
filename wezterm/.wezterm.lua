@@ -19,13 +19,23 @@ wezterm.on(
 )
 
 wezterm.on("window-config-reloaded", function(window)
-    if wezterm.gui.screens().active.name == "XB271HU" then
+    if wezterm.gui.screens().active.name == "XB271HU" and wezterm.gui.screens().by_name["Built-in Retina Display"] ~= nil then
         window:set_config_overrides({
             dpi = 250,
             font_size = 14,
             window_frame = {
                 font = wezterm.font(font_family, { weight = "Bold" }),
-                font_size = 12,
+                font_size = 12.5,
+                active_titlebar_bg = primary_color,
+            },
+        })
+    elseif wezterm.gui.screens().active.name == "XB271HU" then
+        window:set_config_overrides({
+            dpi = 144,
+            font_size = 14,
+            window_frame = {
+                font = wezterm.font(font_family, { weight = "Bold" }),
+                font_size = 12.5,
                 active_titlebar_bg = primary_color,
             },
         })
