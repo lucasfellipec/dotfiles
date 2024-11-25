@@ -5,7 +5,7 @@ local font_family = "JetBrains Mono"
 wezterm.on(
     "format-tab-title",
     function(tab)
-        local title = "hi"
+        local title = "~"
         if tab.is_active then
             return {
                 { Text = title },
@@ -19,19 +19,9 @@ wezterm.on(
 )
 
 wezterm.on("window-config-reloaded", function(window)
-    if wezterm.gui.screens().active.name == "XB271HU" and wezterm.gui.screens().by_name["Built-in Retina Display"] ~= nil then
+    if wezterm.gui.screens().active.name == "XB271HU" then
         window:set_config_overrides({
-            dpi = 250,
-            font_size = 14,
-            window_frame = {
-                font = wezterm.font(font_family, { weight = "Bold" }),
-                font_size = 12.5,
-                active_titlebar_bg = primary_color,
-            },
-        })
-    elseif wezterm.gui.screens().active.name == "XB271HU" then
-        window:set_config_overrides({
-            dpi = 144,
+            dpi = 165,
             font_size = 14,
             window_frame = {
                 font = wezterm.font(font_family, { weight = "Bold" }),
