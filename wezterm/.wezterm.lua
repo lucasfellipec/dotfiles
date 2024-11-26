@@ -132,7 +132,7 @@ return {
     window_close_confirmation = "NeverPrompt",
     window_padding = {
     },
-    -- enable_tab_bar = false,
+    enable_tab_bar = false,
     font_size = 14,
     initial_cols = 100,
     initial_rows = 30,
